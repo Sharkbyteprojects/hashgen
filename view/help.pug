@@ -1,0 +1,29 @@
+doctype html
+html(lang="de")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title Hashgen
+        link(rel="shortcut icon" href="https://fire-engine-icons.github.io/shbyte-logopublishers/sharkbytelogo.ico")
+        link(rel="apple-touch-icon" href="https://fire-engine-icons.github.io/shbyte-logopublishers/sharkbytelogo.png")
+        link(rel="stylesheet" href="/boot.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+    body
+      nav.navbar.navbar-expand-sm.justify-content-center.bg-primary.navbar-dark(style="background-color:#ff3000 !important")
+                img(style="height:70px;" src="https://fire-engine-icons.github.io/shbyte-logopublishers/sharkbytelogo.svg" alt="Sharkbyte" onclick="document.location.href='/'").imagelog
+                ul.navbar-nav
+                  li.nav-item
+                    a.nav-link(style="color:#0010ff" href="https://github.com/sharkbyteprojects" target="_blank") Sharkbyte on GITHUB
+      h1 Api Help
+      div.alert.alert-success
+        strong GET from /api
+        br
+        | query hash must content one of these: ["md5","sha256", "sha1"] 
+        br
+        | query txt content the text to hash.
+      div.alert.alert-warning
+        strong POST to /api 
+        br
+        | body hash must content one of these: ["md5","sha256", "sha1"] 
+        br
+        | body txt content the text to hash.
+      
