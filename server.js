@@ -166,14 +166,6 @@ app.get("/cookie/remove", (req, res) => {
     console.log("User removed Session Cookie");
   });
 });
-app.get("/*", (req, res) => {
-  res.redirect("/");
-});
-app.use((req, res, next) => {
-  //404
-  res.status(405);
-  res.send("405 - This Method is not allowed");
-});
 // listen for requests :)
 const listener = rel(app,[__dirname+"/view",__dirname+"/public"]).listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
