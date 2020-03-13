@@ -23,6 +23,9 @@ html(lang="de")
       div#others
         h1 Shark Hashgen
         h2 Powered by shark-hashlib
+        div.alert.alert-dark
+          strong(style="color:white") How often users Called this site:
+          iframe(scrolling="no" src="https://analytica.glitch.me/analytics/sharkbyte?appname=sharkapphashgen&appid=192331#0538ff" width="100%" height="85" frameborder="0")
         div
           - if(hash)
               div.alert.alert-success= "Your "+hashd+" Hash "+element + " from \""+ lasten+"\""
@@ -40,4 +43,7 @@ html(lang="de")
             button.btn.btn-info(onclick="xd.value='md5';document.getElementById('md').disabled=true;document.getElementById('sha').disabled=false;document.getElementById('shb').disabled=false;")#md MD5
             button.btn.btn-info(onclick="xd.value='sha256';document.getElementById('md').disabled=false;document.getElementById('sha').disabled=true;document.getElementById('shb').disabled=false;")#sha SHA 256
             button.btn.btn-info(onclick="xd.value='sha1';document.getElementById('md').disabled=false;document.getElementById('sha').disabled=false;document.getElementById('shb').disabled=true;")#shb SHA 1
+      script(src="https://cdn.jsdelivr.net/gh/Sharkbyteprojects/emojyRandom@v0.0.4/selective.js")
+      script(type="text/javascript" src="/reloader.js/reloader.js")
+      script document.getElementsByTagName("title")[0].innerText=randomEmojyShark.default()+" Hashgen "+randomEmojyShark.default();
       script document.getElementById("noscript").style="display:none;";document.getElementById("others").style="display:block;"; if(document.location.hash=="#invalid-csurf"){console.error("Invalid CSURF Token");document.getElementById("csurfin").style="display:block;"; setTimeout(()=>{ document.getElementById("csurfin").style="display:none;"; document.location.hash="#";}, 4*8000);}

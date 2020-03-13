@@ -9,6 +9,7 @@ const csrf = require("csurf");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const app = express();
+const rel=require("reloadsh.js");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(compression());
@@ -174,6 +175,6 @@ app.use((req, res, next) => {
   res.send("405 - This Method is not allowed");
 });
 // listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
+const listener = rel(app,[__dirname+"/view",__dirname+"/public"]).listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
