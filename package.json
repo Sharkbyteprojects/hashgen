@@ -14,7 +14,7 @@
     "shark-hashlib": "^1.0.0",
     "compression": "^1.7.4",
     "rxjs": "^6.5.4",
-    "pug": "^2.0.4",
+    "pug": "^3.0.0",
     "express-session": "^1.16.1",
     "csurf": "^1.11.0",
     "cookie-parser": "^1.4.4",
